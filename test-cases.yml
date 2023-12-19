@@ -85,3 +85,36 @@
   expected-result: |
     Отображается уведомление о необходимости заполнить поле Password Confirmation
 
+- summary: |
+    Отсутствие пароля при регистрации
+  requirement: |
+    При отсутствии значений в поле пароля система должна уведомлять пользователя
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить только два поля: Nickname, Email
+    - Нажать Submit
+  expected-result: |
+    Отображается уведомление о необходимости заполнить недостающие поля
+
+- summary: |
+    Отсутствие электронной почты при регистрации
+  requirement: |
+    При отсутствии значений в поле пароля система должна уведомлять пользователя
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Password = MetalRacer777
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить три поля: Nickname, Password, Password Confirmation
+    - Нажать Submit
+  expected-result: |
+    Отображается уведомление о необходимости заполнить поле электронной почты
+
+- summary: |
+    
+  
