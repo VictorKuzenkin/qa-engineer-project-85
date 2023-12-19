@@ -116,5 +116,33 @@
     Отображается уведомление о необходимости заполнить поле электронной почты
 
 - summary: |
-    
-  
+    Отсутствие имени пользователя при регистрации
+  requirement: |
+    При отсутствии значений в поле Nickname система должна уведомлять пользователя
+  prerequisites: |
+    empty
+  test-data: |
+    Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить три поля: Email, Password, Password Confirmation
+    - Нажать Submit
+  expected-result: |
+    Отображается уведомление о необходимости заполнить поле имени пользователя
+
+- summary: |
+    Несовпадение паролей в форме регистрации
+  requirement: |
+    При расхождении значений в полях Password и Password Confirmation должно отображаться уведомление об ошибке
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+  steps:
+     Открыть страницу регистрации
+    - Заполнить поля: Nickname, Email, Password
+    - В поле Password Confirmation написать значение MetalRacer77
+    - Нажать Submit
+  expected-result: |
+    Отображается уведомление об ошибке подтверждения пароля
+
