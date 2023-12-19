@@ -173,3 +173,16 @@
     - Нажать на кнопку «Sign in with Discord»
   expected-result: |
     Пользователь успешно авторизован в системе
+
+- summary: |
+    Проверка электронной почты при регистрации
+  requirement: |
+    При вводе некорректного адреса эл. почты система должна уведомлять пользователя об ошибке
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Email = chuvashkinvictoryandex.ru Password = MetalRacer777
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить поля Nickname, Password
+    - В поле Email написать адрес эл.почты
