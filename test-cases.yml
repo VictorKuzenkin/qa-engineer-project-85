@@ -32,7 +32,56 @@
   requirement: |
     Пользователь с профилем на Github должен успешно входить в систему
   prerequisites: |
-    Открыта страница авторизации
+    Наличие профиля на Github
   test-data: |
-    
-  
+    empty
+  steps:
+    - Открыть страницу авторизации
+    - Нажать на кнопку «Sign in with Github»
+  expected-result: |
+    Пользователь успешно авторизуется в системе
+
+- summary: |
+    Проверка авторизации через Discord
+  requirement: |
+    Пользователь с профилем на Discord должен успешно входить в систему
+  prerequisites: |
+    Наличие профиля на Discord
+  test-data: |
+    empty
+  steps:
+    - Открыть страницу авторизации
+    - Нажать на кнопку «Sign in with Discord»
+  expected-result: |
+    Пользователь успешно авторизуется в системе
+
+- summary: |
+    Проверка успешной регистрации пользователя
+  requirement: |
+    Пользователь должен иметь возможность зарегистрироваться на сайте
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить все поля: Nickname, Email, Password, Password Confirmation
+    - Нажать Submit
+  expected-result: |
+    Пользователь успешно регистрируется в системе
+
+- summary: |
+    Отсутствие подтверждения пароля при регистрации
+  requirement: |
+    При отсутствии значений в поле подтверждения пароля система должна уведомлять пользователя
+  prerequisites: |
+    empty
+  test-data: |
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+  steps:
+    - Открыть страницу регистрации
+    - Заполнить только три поля: Nickname, Email, Password
+    - Нажать Submit
+  expected-result: |
+    Отображается уведомление о необходимости заполнить поле Password Confirmation
+
