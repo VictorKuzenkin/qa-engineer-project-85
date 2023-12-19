@@ -4,10 +4,11 @@
   requirement: |
     При верном вводе почты и пароля пользователь должен войти в систему
   prerequisites: |
-    Открыта страница авторизации
+    empty
   test-data: |
     Логин = chuvashkinvictor@yandex.ru Пароль = MetalRacer777
   steps:
+    - Открыть страницу авторизации по кнопке «Sign in»
     - Ввести почту и пароль, указанные при регистрации
     - Нажать кнопку «Submit»
   expected-result: |
@@ -22,6 +23,16 @@
   test-data: |
     empty
   steps:
-    - Нажать на кнопку «Submit»
+    - Нажать на кнопку «Sign up»
   expected-result: |
     Открывается страница регистрации
+
+- summary: |
+    Проверка авторизации через Github
+  requirement: |
+    Пользователь с профилем на Github должен успешно входить в систему
+  prerequisites: |
+    Открыта страница авторизации
+  test-data: |
+    
+  
