@@ -311,4 +311,23 @@
     Игра запустилась с выбранным заданием
 
 - summary: |
+    Проверка возможности написания кода в игре
+  requirement: |
+    Пользователь должен иметь возможность писать код в игре
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    const _ = require("lodash");
+    const R = require("rambda");
+    
+    const solution = (width, length) => {
+      return width * length;
+    };
+
+    module.exports = solution;
+  steps:
+    - Нажать на кнопку "Create a game"
+    - В Game Type выбрать "With a bot"
+    - Выбрать задание rect_area
+    - Нажать на "Create battle"
     
