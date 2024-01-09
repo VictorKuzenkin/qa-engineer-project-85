@@ -1,21 +1,6 @@
 ---
 - summary: |
-    Проверка входа пользователя с зарегистрированными почтой и паролем
-  requirement: |
-    При верном вводе почты и пароля пользователь должен войти в систему
-  prerequisites: |
-    empty
-  test-data: |
-    Логин = chuvashkinvictor@yandex.ru Пароль = MetalRacer777!
-  steps:
-    - Открыть страницу авторизации по кнопке «Sign in»
-    - Ввести почту и пароль, указанные при регистрации
-    - Нажать кнопку «Submit»
-  expected-result: |
-    Пользователь попадает на главную страницу
-
-- summary: |
-    Проверка страницы регистрации
+    Переход на страницу регистрации
   requirement: |
     При нажатии на кнопку «Sign up» должна открываться страница регистрации нового пользователя
   prerequisites: |
@@ -26,34 +11,6 @@
     - Нажать на кнопку «Sign up»
   expected-result: |
     Открывается страница регистрации
-
-- summary: |
-    Проверка авторизации через Github на странице авторизации
-  requirement: |
-    Пользователь с профилем на Github должен успешно входить в систему
-  prerequisites: |
-    Пользователь зарегистрирован и авторизован на Github
-  test-data: |
-    empty
-  steps:
-    - Открыть страницу авторизации
-    - Нажать на кнопку «Sign in with Github»
-  expected-result: |
-    Пользователь успешно авторизован в системе
-
-- summary: |
-    Проверка авторизации через Discord на странице авторизации
-  requirement: |
-    Пользователь с профилем на Discord должен успешно входить в систему
-  prerequisites: |
-    Пользователь зарегистрирован и авторизован на Discord
-  test-data: |
-    empty
-  steps:
-    - Открыть страницу авторизации
-    - Нажать на кнопку «Sign in with Discord»
-  expected-result: |
-    Пользователь успешно авторизован в системе
 
 - summary: |
     Проверка успешной регистрации пользователя
@@ -71,6 +28,49 @@
     Пользователь успешно регистрируется в системе
 
 - summary: |
+    Проверка авторизации пользователя с зарегистрированными почтой и паролем
+  requirement: |
+    При верном вводе почты и пароля пользователь должен войти в систему
+  prerequisites: |
+    empty
+  test-data: |
+    Логин = chuvashkinvictor@yandex.ru Пароль = MetalRacer777!
+  steps:
+    - Открыть страницу авторизации по кнопке «Sign in»
+    - Ввести почту и пароль, указанные при регистрации
+    - Нажать кнопку «Submit»
+  expected-result: |
+    Пользователь успешно авторизован и перенаправляется на главную страницу
+
+- summary: |
+    Проверка авторизации через Github на странице авторизации
+  requirement: |
+    Пользователь с профилем на Github должен успешно входить в систему
+  prerequisites: |
+    Пользователь зарегистрирован на Github
+  test-data: |
+    empty
+  steps:
+    - Открыть страницу авторизации по кнопке Sign in
+    - Нажать на кнопку «Sign in with Github»
+  expected-result: |
+    Пользователь успешно авторизован в системе
+
+- summary: |
+    Проверка авторизации через Discord на странице авторизации
+  requirement: |
+    Пользователь с профилем на Discord должен успешно входить в систему
+  prerequisites: |
+    Пользователь зарегистрирован и авторизован на Discord
+  test-data: |
+    empty
+  steps:
+    - Открыть страницу авторизации по кнопке Sign in
+    - Нажать на кнопку «Sign in with Discord»
+  expected-result: |
+    Пользователь успешно авторизован в системе
+
+- summary: |
     Отсутствие подтверждения пароля при регистрации
   requirement: |
     Система должна проверять заполнение необходимых полей при регистрации
@@ -79,7 +79,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
-    - Открыть страницу регистрации
+    - Открыть страницу регистрации по кнопке Sign up
     - Заполнить только три поля: Nickname, Email, Password
     - Нажать Submit
   expected-result: |
@@ -107,7 +107,7 @@
   prerequisites: |
     empty
   test-data: |
-    Nickname = Victor777 Password = MetalRacer777
+    Nickname = Victor777 Password = MetalRacer777!
   steps:
     - Открыть страницу регистрации
     - Заполнить три поля: Nickname, Password, Password Confirmation
@@ -122,7 +122,7 @@
   prerequisites: |
     empty
   test-data: |
-    Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+    Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
     - Открыть страницу регистрации
     - Заполнить три поля: Email, Password, Password Confirmation
@@ -137,11 +137,11 @@
   prerequisites: |
     empty
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
      Открыть страницу регистрации
     - Заполнить поля: Nickname, Email, Password
-    - В поле Password Confirmation написать значение MetalRacer77
+    - В поле Password Confirmation написать значение MetalRacer777
     - Нажать Submit
   expected-result: |
     Отображается уведомление об ошибке подтверждения пароля
@@ -155,7 +155,7 @@
   test-data: |
     empty
   steps:
-    - Открыть страницу регистрации
+    - Открыть страницу регистрации по кнопке Sign up
     - Нажать на кнопку «Sign in with Github»
   expected-result: |
     Пользователь успешно авторизован в системе
@@ -183,7 +183,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictoryandex.ru Password = MetalRacer777!
   steps:
-    - Открыть страницу регистрации
+    - Открыть страницу регистрации по кнопке Sign up
     - Заполнить поля Nickname, Password
     - В поле Email написать адрес эл.почты без @
   expected-result: |
@@ -218,7 +218,7 @@
     Открылось меню создания игры
 
 - summary: |
-    Проверка меню создания игры
+    Проверка возможности создания игры
   requirement: |
     Пользователь должен иметь возможность создавать игру
   prerequisites: |
