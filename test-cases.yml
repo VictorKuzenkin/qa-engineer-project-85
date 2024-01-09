@@ -6,7 +6,7 @@
   prerequisites: |
     empty
   test-data: |
-    Логин = chuvashkinvictor@yandex.ru Пароль = MetalRacer777
+    Логин = chuvashkinvictor@yandex.ru Пароль = MetalRacer777!
   steps:
     - Открыть страницу авторизации по кнопке «Sign in»
     - Ввести почту и пароль, указанные при регистрации
@@ -62,7 +62,7 @@
   prerequisites: |
     empty
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
     - Открыть страницу регистрации
     - Заполнить все поля: Nickname, Email, Password, Password Confirmation
@@ -77,7 +77,7 @@
   prerequisites: |
     empty
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777
+    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
     - Открыть страницу регистрации
     - Заполнить только три поля: Nickname, Email, Password
@@ -181,7 +181,7 @@
   prerequisites: |
     empty
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictoryandex.ru Password = MetalRacer777
+    Nickname = Victor777 Email = chuvashkinvictoryandex.ru Password = MetalRacer777!
   steps:
     - Открыть страницу регистрации
     - Заполнить поля Nickname, Password
@@ -204,7 +204,7 @@
     Открылась страница игры с заданием и ботом
 
 - summary: |
-    Проверка кнопки создания игры
+    Работа кнопки создания игры
   requirement: |
     Пользователь должен иметь возможность создавать игру
   prerequisites: |
@@ -224,7 +224,7 @@
   prerequisites: |
     Пользователь авторизован
   test-data: |
-     Стандартные, предустановленные настройки игры
+     empty
   steps:
     - Нажать на кнопку "Create a game"
     - Нажать кнопку "Create battle"
@@ -247,7 +247,7 @@
     Запущена игра с ботом
 
 - summary: |
-    Создание игры с другом
+    Возможность пригласить друга в игру
   requirement: |
     Пользователь должен иметь возможность играть с другом
   prerequisites: |
@@ -260,7 +260,7 @@
     - Выбрать оппонента из списка
     - Нажать на "Create invite"
   expected-result: |
-    Появилось уведомление о том, что приглашение отправилось пользователю
+    Появилось уведомление о том, что приглашение отправлено пользователю
 
 - summary: |
     Проверка минимального значения таймера игры
@@ -359,6 +359,8 @@
     Пользователь должен иметь возможность сдаться
   prerequisites: |
     empty
+  test-data: |
+    empty
   steps:
     - Создать любую игру
     - Нажать на красный флажок
@@ -372,11 +374,44 @@
     Пользователь должен иметь возможность присоединяться к играм, созданным другими пользователями
   prerequisites: |
     Пользователь авторизован
+  test-data:
+    empty
   steps:
     - Зайти на главную страницу https://codebattle.hexlet.io/#lobby
     - В столбце Actions нажать на любую кнопку Fight
   expected-result: |
-    Пользователь успешно присоединился к соответствующей игре
+    Пользователь успешно присоединился к заявленной игре
 
 - summary: |
-    Проверка 
+    Функция восстановления пароля
+  requirement: |
+    Пользователь должен иметь возможность восстановить забытый пароль
+  prerequisites: |
+    Пользователь зарегистрирован в системе
+  test-data:
+    chuvashkinvictor@yandex.ru
+  steps:
+    - Зайти на страницу авторизации
+    - Нажать на кнопку "Forgot your password?"
+    - Вписать email, введённый при регистрации
+    - Нажать кнопку "Submit"
+  expected-result: |
+    На странице появилось соответствующее уведомление, а на указанный email пришло сообщение с инструкцией по сбросу пароля
+
+- summary: |
+    Проверка уровней сложности при создании игры
+  requirement: |
+    Игровые задания должны отличаться по уровню сложности
+  prerequisites: |
+    Пользователь зарегистрирован в системе
+  test-data:
+    empty
+  steps:
+    - Нажать на кнопку Create a game
+    - В поле Level поочерёдно выбрать разные уровни сложности
+    - На каждом уровне сложности открывать список доступных заданий
+  expected-result: |
+    На каждом уровне сложности предлагаются разные задания
+
+    
+    
