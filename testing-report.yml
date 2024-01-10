@@ -62,3 +62,87 @@
 - summary: |
     Проверка возможности создания игры
   status: pass
+
+- summary: |
+    Создание игры с ботом
+  status: pass
+
+- summary: |
+    Возможность пригласить друга в игру
+  status: pass
+
+- summary: |
+    Проверка таймера игры
+  status: fail
+
+- summary: |
+    Проверка минимального значения таймера игры
+  status: fail
+
+- summary: |
+    Проверка максимального значения таймера игры
+  status: fail
+
+- summary: |
+    Проверка запуска игры с выбранным заданием
+  status: pass
+
+- summary: |
+    Проверка валидации корректно написанного кода
+  status: pass
+
+- summary: |
+    Проверка валидации некорректного кода
+  status: pass
+
+- summary: |
+    Проверка функции "Сдаться"
+  status: pass
+
+- summary: |
+    Проверка кнопки Cancel после нажатия на красный флажок
+  status: pass
+
+- summary: |
+    Проверка возможности присоединения к игре, созданной другим пользователем
+  status: pass
+
+- summary: |
+    Функция восстановления пароля
+  status: pass
+
+- summary: |
+    Проверка уровней сложности при создании игры
+  status: pass
+
+- summary: |
+    Возможность создания турнира
+  status: pass
+
+- summary: |
+    Возможность общаться в чате в окне турнира
+  status: fail
+
+- summary: |
+    Возможность выбрать название турнира
+  status: pass
+
+- summary: |
+    Выбор командного типа турнира
+  status: pass
+
+- summary: |
+    Выбор турнира "лестница" (stairway)
+  status: pass
+
+- summary: |
+    Выбор турнира "swiss"
+  status: pass
+
+- summary: |
+    Выбор турнира "ladder"
+  status: pass
+
+- summary: |
+    Опция настройки длительности раундов в поле формата json
+  status: fail
