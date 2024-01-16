@@ -76,6 +76,10 @@
   status: pass
 
 - summary: |
+    Подключение к игре по приглашению от другого пользователя
+  status: pass
+
+- summary: |
     Корректность таймера игры
   status: fail
 
