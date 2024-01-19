@@ -81,15 +81,15 @@
 
 - summary: |
     Корректность таймера игры
-  status: fail
+  status: pass
 
 - summary: |
     Установка минимального значения таймера игры
-  status: fail
+  status: pass
 
 - summary: |
     Установка максимального значения таймера игры
-  status: fail
+  status: pass
 
 - summary: |
     Запуск игры с выбранным заданием
