@@ -97,7 +97,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
-    - Заполнить только три поля: Nickname, Email, Password
+    - Заполнить только поля Nickname, Email, Password
     - Нажать Submit
   expected-result: |
     Отображается уведомление о необходимости заполнить поле Password Confirmation
@@ -112,7 +112,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictor@yandex.ru
   steps:
-    - Заполнить только два поля: Nickname, Email
+    - Заполнить только поля Nickname, Email
     - Нажать Submit
   expected-result: |
     Отображается уведомление о необходимости заполнить недостающие поля
@@ -127,7 +127,7 @@
   test-data: |
     Nickname = Victor777 Password = MetalRacer777!
   steps:
-    - Заполнить три поля: Nickname, Password, Password Confirmation
+    - Заполнить только поля Nickname, Password, Password Confirmation
     - Нажать Submit
   expected-result: |
     Отображается уведомление о необходимости заполнить поле электронной почты
@@ -142,7 +142,7 @@
   test-data: |
     Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
-    - Заполнить три поля: Email, Password, Password Confirmation
+    - Заполнить только поля Email, Password, Password Confirmation
     - Нажать Submit
   expected-result: |
     Отображается уведомление о необходимости заполнить поле имени пользователя
@@ -157,7 +157,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
-    - Заполнить поля: Nickname, Email, Password
+    - Заполнить поля Nickname, Email, Password
     - В поле Password Confirmation написать значение MetalRacer777
     - Нажать Submit
   expected-result: |
