@@ -23,7 +23,7 @@
   test-data: |
     Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
   steps:
-    - Заполнить все поля: Nickname, Email, Password, Password Confirmation
+    - Заполнить поля Nickname, Email, Password, Password Confirmation
     - Нажать Submit
   expected-result: |
     Пользователь успешно зарегистрирован в системе
