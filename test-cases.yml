@@ -1,19 +1,5 @@
 ---
 - summary: |
-    Переход на страницу регистрации
-  requirement: |
-    При нажатии на кнопку «Sign up» должна открываться страница регистрации нового пользователя
-  prerequisites: |
-    Пользователь не авторизован
-    Открыта страница codebattle.hexlet.io
-  test-data: |
-    empty
-  steps:
-    - Нажать на кнопку «Sign up»
-  expected-result: |
-    Открылась страница регистрации
-
-- summary: |
     Успешная регистрация пользователя
   requirement: |
     Пользователь должен иметь возможность зарегистрироваться на сайте
@@ -21,26 +7,12 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
+    Nickname, Email, Password
   steps:
     - Заполнить поля Nickname, Email, Password, Password Confirmation
     - Нажать Submit
   expected-result: |
     Пользователь успешно зарегистрирован в системе
-
-- summary: |
-    Переход на страницу авторизации
-  requirement: |
-    При нажатии на кнопку «Sign in» должна открываться страница авторизации
-  prerequisites: |
-    Пользователь не авторизован
-    Открыта страница codebattle.hexlet.io
-  test-data: |
-    empty
-  steps:
-    - Нажать на кнопку "Sign in"
-  expected-result: |
-    Открылась страница авторизации
 
 - summary: |
     Авторизация пользователя с зарегистрированными почтой и паролем
@@ -95,7 +67,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
+    Nickname, Email, Password
   steps:
     - Заполнить только поля Nickname, Email, Password
     - Нажать Submit
@@ -110,7 +82,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru
+    Nickname, Email
   steps:
     - Заполнить только поля Nickname, Email
     - Нажать Submit
@@ -125,7 +97,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Password = MetalRacer777!
+    Nickname, Password
   steps:
     - Заполнить только поля Nickname, Password, Password Confirmation
     - Нажать Submit
@@ -140,7 +112,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
+    Email, Password
   steps:
     - Заполнить только поля Email, Password, Password Confirmation
     - Нажать Submit
@@ -155,7 +127,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictor@yandex.ru Password = MetalRacer777!
+    Nickname, Email, Password
   steps:
     - Заполнить поля Nickname, Email, Password
     - В поле Password Confirmation написать значение MetalRacer777
@@ -201,7 +173,7 @@
     Пользователь не авторизован
     Открыта страница регистрации
   test-data: |
-    Nickname = Victor777 Email = chuvashkinvictoryandex.ru Password = MetalRacer777!
+    Nickname, Email, Password
   steps:
     - Заполнить поля Nickname, Password
     - В поле Email написать адрес эл.почты без @
